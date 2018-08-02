@@ -10,17 +10,14 @@ attr_reader :id
     @grade = grade
   end
 
-  def self.create_tabkle
-    sql = <<-SQL
-      CREATE TABLE IF NOT EXISTS students (
+  def self.create_table
+    sql =  <<-SQL
+      CREATE TABLE IF NOT EXISTS songs (
         id INTEGER PRIMARY KEY,
         name TEXT,
-        grade INTEGER,
-      )
-      SQL
+        album TEXT
+        )
+        SQL
     DB[:conn].execute(sql)
-      end
-    end
   end
-
 end
