@@ -10,4 +10,11 @@ attr_reader :id
     @grade = grade
   end
 
+  def self.create_tabkle
+    sql = <<-SQL
+      CREATE TABLE IF NOT EXISTS students (
+        name TEXT,
+        grade INTEGER,
+      )
+    CREA
 end
